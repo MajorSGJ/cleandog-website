@@ -11,7 +11,7 @@ export const defaultData = {
     logo: 'https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/530250329_122252652644225236_5126677374456420803_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=TGNfKVZuC54Q7kNvwFBNvks&_nc_oc=Adl-qcjxPhcyAFMqhESe0BduNfbQXhGRRMlotaSx2NtFRLv6VGbdNqBkbNAQgy8M-Wc&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=0uWkB8iPSUFeV2In1C58gg&oh=00_AfuEYaOinMgzXMlLR3tQB1Yt9aErU6BSXOeRMNY5Cd9Jnw&oe=69893BC3',
     banner: 'https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/531220909_122252640434225236_4949481271714898297_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HjsNomH_V1YQ7kNvwGW__bj&_nc_oc=AdlyL3DFTuamgaRiig9ULzg1W2LeTMrOxvkj6BKphDgYhbf1xQKEFrVrAM4w-2jI3mI&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=RQigBjQgxYkqiyyn4iYcjQ&oh=00_AfubVUV_yuRL95oPECs5e-gnjib-R1-oWYcmLfDR06kAUA&oe=69893CE3',
     maintenanceMode: false,
-    web3formsKey: '716144a9-0142-4086-a294-856327a6bd74',
+    web3formsKey: '',
   },
   
   hero: {

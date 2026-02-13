@@ -1,42 +1,107 @@
-import { createContext, useContext, useState } from 'react'
-import { adminCredentials } from '../data/defaultData'
+import { createContext, useContext, useState, useEffect } from 'react'
 
 const AuthContext = createContext()
 
-// SHA-256 hash function
-const sha256 = async (message) => {
-  const msgBuffer = new TextEncoder().encode(message)
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
-  const hashArray = Array.from(new Uint8Array(hashBuffer))
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
-}
-
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
-  
+  const [isLoading, setIsLoading] = useState(true)
   const [loginError, setLoginError] = useState('')
+  const [token, setToken] = useState(localStorage.getItem('authToken') || null)
+
+  // Check authentication status on mount and token change
+  useEffect(() => {
+    const checkAuth = async () => {
+      if (!token) {
+        setIsAuthenticated(false)
+        setIsLoading(false)
+        return
+      }
+
+      try {
+        const response = await fetch('/api/auth/check', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+        
+        const data = await response.json()
+        setIsAuthenticated(data.authenticated)
+        
+        if (!data.authenticated) {
+          localStorage.removeItem('authToken')
+          setToken(null)
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error)
+        setIsAuthenticated(false)
+        localStorage.removeItem('authToken')
+        setToken(null)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    checkAuth()
+  }, [token])
 
   const login = async (username, password) => {
-    const passwordHash = await sha256(password)
-    if (username === adminCredentials.username && passwordHash === adminCredentials.passwordHash) {
-      setIsAuthenticated(true)
-      setLoginError('')
-      return true
+    setLoginError('')
+    
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      })
+
+      const data = await response.json()
+      
+      if (data.success) {
+        setToken(data.token)
+        localStorage.setItem('authToken', data.token)
+        setIsAuthenticated(true)
+        setLoginError('')
+        return true
+      } else {
+        setLoginError(data.error || 'Login failed')
+        return false
+      }
+    } catch (error) {
+      console.error('Login error:', error)
+      setLoginError('Connection error. Please try again.')
+      return false
     }
-    setLoginError('Nieprawidłowa nazwa użytkownika lub hasło')
-    return false
   }
 
-  const logout = () => {
-    setIsAuthenticated(false)
+  const logout = async () => {
+    try {
+      if (token) {
+        await fetch('/api/logout', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+      }
+    } catch (error) {
+      console.error('Logout error:', error)
+    } finally {
+      localStorage.removeItem('authToken')
+      setToken(null)
+      setIsAuthenticated(false)
+    }
   }
 
   return (
     <AuthContext.Provider value={{
       isAuthenticated,
+      isLoading,
       loginError,
       login,
       logout,
+      token
     }}>
       {children}
     </AuthContext.Provider>

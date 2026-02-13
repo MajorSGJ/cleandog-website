@@ -1,22 +1,29 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { defaultData } from '../data/defaultData'
+import { useAuth } from './AuthContext'
 
 const DataContext = createContext()
 
 // Save full data object to server (writes public/data.json)
-const saveToServer = async (newData) => {
+const saveToServer = async (newData, token) => {
   try {
     const res = await fetch('/api/save', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': token ? `Bearer ${token}` : ''
+      },
       body: JSON.stringify(newData),
     })
-    if (!res.ok) throw new Error('Save failed')
+    if (!res.ok) {
+      const error = await res.json()
+      throw new Error(error.error || 'Save failed')
+    }
     console.log('✅ Dane zapisane na serwerze')
     return true
   } catch (err) {
     console.error('❌ Błąd zapisu:', err)
-    return false
+    throw err
   }
 }
 
@@ -25,6 +32,8 @@ export const DataProvider = ({ children }) => {
   const [hasChanges, setHasChanges] = useState(false)
   const [editMode, setEditMode] = useState(false)
   const [loaded, setLoaded] = useState(false)
+  const [saveError, setSaveError] = useState('')
+  const { token } = useAuth()
 
   // On mount: fetch /data.json (the single source of truth)
   useEffect(() => {
@@ -40,11 +49,23 @@ export const DataProvider = ({ children }) => {
       })
   }, [])
 
-  // Helper: update state + save to server
-  const persist = (newData) => {
+  // Helper: update state + save to server with proper error handling
+  const persist = async (newData) => {
+    // Update local state immediately (optimistic update)
+    const previousData = data
     setData(newData)
     setHasChanges(true)
-    saveToServer(newData)
+    setSaveError('')
+    
+    try {
+      await saveToServer(newData, token)
+    } catch (error) {
+      // Rollback on error
+      console.error('Save failed, rolling back:', error)
+      setData(previousData)
+      setSaveError(error.message || 'Failed to save changes')
+      throw error
+    }
   }
 
   const updateData = (section, newData) => {
@@ -141,6 +162,8 @@ export const DataProvider = ({ children }) => {
       setHasChanges,
       editMode,
       setEditMode,
+      saveError,
+      setSaveError,
       getText,
       setText,
       updateData,

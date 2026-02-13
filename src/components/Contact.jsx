@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Phone, Mail, MapPin, Send, MessageCircle, Clock, Heart } from 'lucide-react'
@@ -11,7 +11,7 @@ const Contact = () => {
   const { data, updateNestedData, updateData, getText } = useData()
   const siteInfo = data.siteInfo
   const primaryLocation = data.locations?.find(l => l.isPrimary) || data.locations?.[0]
-  const rateLimiter = useRef(new RateLimiter(3, 60000)).current
+  const rateLimiter = useMemo(() => new RateLimiter(3, 60000), [])
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -61,28 +61,14 @@ const Contact = () => {
         message: sanitizeInput(formData.message)
       }
 
-      // Check if Web3Forms key is configured
-      if (!siteInfo.web3formsKey) {
-        setSubmitError('Formularz kontaktowy nie jest skonfigurowany. Skontaktuj się telefonicznie.')
-        return
-      }
-
-      // Send email using Web3Forms API
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Send email using server-side proxy
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          access_key: siteInfo.web3formsKey,
-          subject: `Nowa wiadomość z Clean Dog - ${sanitizedData.name}`,
-          from_name: sanitizedData.name,
-          email: sanitizedData.email,
-          phone: sanitizedData.phone,
-          message: sanitizedData.message,
-          to_email: siteInfo.email
-        })
+        body: JSON.stringify(sanitizedData)
       })
 
       const result = await response.json()

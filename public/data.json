@@ -1,0 +1,224 @@
+{
+  "siteInfo": {
+    "name": "Clean Dog",
+    "tagline": "Salon Groomerski",
+    "owner": "Daria Wiśniewska",
+    "phone": "723 179 982",
+    "email": "Daria@cleandog.pl",
+    "facebook": "https://www.facebook.com/profile.php?id=61556757098660",
+    "openingYear": 2024,
+    "logo": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/530250329_122252652644225236_5126677374456420803_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=TGNfKVZuC54Q7kNvwFBNvks&_nc_oc=Adl-qcjxPhcyAFMqhESe0BduNfbQXhGRRMlotaSx2NtFRLv6VGbdNqBkbNAQgy8M-Wc&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=0uWkB8iPSUFeV2In1C58gg&oh=00_AfuEYaOinMgzXMlLR3tQB1Yt9aErU6BSXOeRMNY5Cd9Jnw&oe=69893BC3",
+    "banner": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/531220909_122252640434225236_4949481271714898297_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=HjsNomH_V1YQ7kNvwGW__bj&_nc_oc=AdlyL3DFTuamgaRiig9ULzg1W2LeTMrOxvkj6BKphDgYhbf1xQKEFrVrAM4w-2jI3mI&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=RQigBjQgxYkqiyyn4iYcjQ&oh=00_AfubVUV_yuRL95oPECs5e-gnjib-R1-oWYcmLfDR06kAUA&oe=69893CE3",
+    "maintenanceMode": false,
+    "web3formsKey": "716144a9-0142-4086-a294-856327a6bd74"
+  },
+  "hero": {
+    "title": "Twój pupil zasługuje na najlepsze",
+    "subtitle": "Profesjonalny salon groomerski",
+    "description": "Salon groomerski Clean Dog Dari Wiśniewskiej. Profesjonalna pielęgnacja, strzyżenie i kąpiel dla Twojego czworonożnego przyjaciela w Nowym Mieście Lubawskim i Iławie.",
+    "stats": [
+      {
+        "number": "2",
+        "label": "Lokalizacje"
+      },
+      {
+        "number": "2024",
+        "label": "Rok otwarcia"
+      },
+      {
+        "number": "2+",
+        "label": "Lata doświadczenia"
+      }
+    ]
+  },
+  "about": {
+    "title": "Poznaj salon Clean Dog",
+    "description1": "Witaj w Clean Dog - salonie groomerskim prowadzonym przez Darię Wiśniewską. Nasza pasja do zwierząt i doświadczenie pozwalają nam oferować usługi na najwyższym poziomie.",
+    "description2": "Działamy w dwóch lokalizacjach: w Nowym Mieście Lubawskim oraz w Iławie (Dom Handlowy Feniks). W naszych salonach dbamy o komfort i bezpieczeństwo każdego pupila, stosując profesjonalne kosmetyki i najnowsze techniki pielęgnacji.",
+    "image": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/518321861_122248047206225236_3226382447748216599_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2HNpl_sbtGoQ7kNvwFWoOua&_nc_oc=AdlNaRCBXLSQ9E3UlQ1EhZp9YP5qcMy1JSlT7p6g_QuEf5xXkvbpCEOuEH7DxTEloB0&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=tQJiSIi5_px4gWYf-4mGhw&oh=00_AfvAZQZSViVmpA16dWDrEcLg_G6uk3HCOvDRl70V0xffPg&oe=6989446E",
+    "features": [
+      {
+        "icon": "Heart",
+        "title": "Miłość do zwierząt",
+        "description": "Każdy pupil traktowany jest z największą troską i miłością."
+      },
+      {
+        "icon": "Award",
+        "title": "Profesjonalizm",
+        "description": "Doświadczenie i ciągłe doskonalenie umiejętności."
+      },
+      {
+        "icon": "Shield",
+        "title": "Bezpieczeństwo",
+        "description": "Stosujemy tylko sprawdzone, bezpieczne kosmetyki dla zwierząt."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Indywidualne podejście",
+        "description": "Każdy piesek i kotek wymaga szczególnej uwagi i troski."
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": 1,
+      "icon": "Scissors",
+      "title": "Strzyżenie",
+      "description": "Profesjonalne strzyżenie dostosowane do rasy i preferencji właściciela. Strzyżenie modelowe, higieniczne i wyrównujące.",
+      "features": [
+        "Strzyżenie rasowe",
+        "Strzyżenie modelowe",
+        "Strzyżenie higieniczne"
+      ],
+      "color": "from-pink-400 to-rose-500"
+    },
+    {
+      "id": 2,
+      "icon": "Bath",
+      "title": "Kąpiel i suszenie",
+      "description": "Relaksująca kąpiel z użyciem profesjonalnych kosmetyków dobranych do typu sierści Twojego pupila.",
+      "features": [
+        "Kosmetyki premium",
+        "Masaż podczas kąpieli",
+        "Delikatne suszenie"
+      ],
+      "color": "from-blue-400 to-cyan-500"
+    },
+    {
+      "id": 3,
+      "icon": "Brush",
+      "title": "Rozczesywanie",
+      "description": "Dokładne rozczesywanie i usuwanie kołtunów. Zapobieganie splątaniu sierści i utrzymanie jej w idealnym stanie.",
+      "features": [
+        "Usuwanie kołtunów",
+        "Wyczesywanie podszerstka",
+        "Odżywianie sierści"
+      ],
+      "color": "from-amber-400 to-orange-500"
+    },
+    {
+      "id": 4,
+      "icon": "Stethoscope",
+      "title": "Pielęgnacja uszu",
+      "description": "Delikatne czyszczenie i pielęgnacja uszu. Depilacja kanału słuchowego dla ras tego wymagających.",
+      "features": [
+        "Czyszczenie uszu",
+        "Depilacja",
+        "Kontrola zdrowia"
+      ],
+      "color": "from-emerald-400 to-teal-500"
+    },
+    {
+      "id": 5,
+      "icon": "Heart",
+      "title": "Obcinanie pazurków",
+      "description": "Bezpieczne skracanie pazurków z zachowaniem odpowiedniej długości.",
+      "features": [
+        "Skracanie pazurów",
+        "Bezpieczne",
+        "Pielęgnacja opuszek"
+      ],
+      "color": "from-violet-400 to-purple-500"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 2,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/595381388_122273045138225236_8616398077221246503_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=H2TnugwofIYQ7kNvwEzOoT8&_nc_oc=AdmUYITTwyGvYr6o46TSpIdR_ghgEVdPqCbuFxe_scrRnUZS25Q1IvZf__rMuPf68Dk&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=VULogWUviAsFDUyjQ66-7g&oh=00_AfvktePe3lUqVStSZ3XJXjM93SNL9qbQQtebuCkHMgJR0Q&oe=69892A07",
+      "alt": "Zadbany pupil po pielęgnacji",
+      "category": "Nasi klienci"
+    },
+    {
+      "id": 3,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/588648662_122272123994225236_9046037082307510278_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=3DWP-UGIfs4Q7kNvwFjvbJD&_nc_oc=AdkrAHYzd4hK6awtsMSz5y_CuaazJVsTd9-Z35qSDKplCegaD9F2w_lqOa1ROBRGTjs&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=VULogWUviAsFDUyjQ66-7g&oh=00_AftSpZef03sOFmjFg95N8GgIBryWfiW00b38gB-D5HVLxA&oe=69893223",
+      "alt": "Metamorfoza - strzyżenie i pielęgnacja",
+      "category": "Metamorfozy"
+    },
+    {
+      "id": 4,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/583961366_122270488940225236_8591674126554413023_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8afHkd3yDFcQ7kNvwFJOhk6&_nc_oc=AdmACnsCBKZc52rZjmiyBQZGCK7_oweyQEoZXG-jcqNiAzxNWVBt48MnXnI6BvU15PY&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=oR1vEO3gtMAEjF51839srw&oh=00_Afs3smFGIEM0XCGK0CJS4NrZjEiXXwP_T6o6UzZ-WFOgow&oe=698921F6",
+      "alt": "Efekt końcowy po wizycie",
+      "category": "Nasi klienci"
+    },
+    {
+      "id": 5,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/573371090_122266770272225236_8644124760497814775_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lhMRgu-IT4sQ7kNvwGffmsk&_nc_oc=AdnDvBoLUvU8HqYmv2YdIgsauUgGz6Kjn_rO6JZTVIKbEZTd4LWiB6tOodlAcwrIFYs&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=3vd9jah3Q9pAIE2s-tx-8w&oh=00_AfsS2E2Z_SOqq5kJG-rRqDXrMO-VozaZ3zTcuPg8JxG7qA&oe=69892412",
+      "alt": "Metamorfoza po strzyżeniu",
+      "category": "Strzyżenie"
+    },
+    {
+      "id": 6,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/561734997_122265147098225236_4519071457750875542_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=iUUySXhaQWYQ7kNvwGw6__g&_nc_oc=AdkuN5K4Zlqn8w1-8_AOxo2JR513DFTWxREymE6lNIeW9avDqfGP0IkjgjNyhZFBqls&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=2jvV5sR_0xiHMA-UsqrieA&oh=00_Afvpoe3U6-BzIe8WzCZycqaHZQrwkr9kA7cyPo7KcVuqwg&oe=6989399D",
+      "alt": "Zadbany pupil po pielęgnacji",
+      "category": "Pielęgnacja"
+    },
+    {
+      "id": 7,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/559109276_122263867370225236_8090182977229337435_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=IYuLNh7nYbUQ7kNvwFov8GX&_nc_oc=AdkWchXiWeLGFb8u95uyTh6zQR063lrAHwMZpGURPTl4gG6g-VQPmR10TZa913Y2HWE&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=t0utOuLQQRJe1Gk2y68Fvw&oh=00_AftBeml2Z_xvybiN7qhFDGicgHfkeR6Air56AGSXXZw0Dg&oe=69891E39",
+      "alt": "Metamorfoza - efekt premium",
+      "category": "Metamorfozy"
+    },
+    {
+      "id": 8,
+      "src": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/548195185_122260504496225236_2248579321591864594_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2yQpcjrvxagQ7kNvwFrZlDV&_nc_oc=AdkdMOkcHSsimGMUCWseTqVpvlSo8WW763D54iftfb0QgcxwaEgsHAXHJNoRJhbpBJE&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=qxSgn9SIbTjBgGTdBZY5aA&oh=00_AfvcE0W4PoWrWTCr-iwRK7khe0alUAy-U6DkLutZCyjzpg&oe=6989314B",
+      "alt": "Metamorfoza - dopracowane detale",
+      "category": "Metamorfozy"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Clean Dog - Nowe Miasto Lubawskie",
+      "address": "ul. Narutowicza 28a",
+      "city": "13-300 Nowe Miasto Lubawskie",
+      "phone": "723 179 982",
+      "hours": [
+        {
+          "day": "Codziennie",
+          "time": "Indywidualne"
+        },
+        {
+          "day": "",
+          "time": ""
+        },
+        {
+          "day": "",
+          "time": ""
+        }
+      ],
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Narutowicza+28a+Nowe+Miasto+Lubawskie",
+      "image": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/596956716_122273832734225236_1440861693744145528_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZBh73fQ109AQ7kNvwGdkyW7&_nc_oc=AdkfP6Kg989U6XJlTtyweMXZQ1r8xQxBaCtig0n_WaGygeRl3VzqK1znCz1fXh2ezP8&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=2j4GOqQIQDUHT0QUAuUs3g&oh=00_AfvL3rTjqRoXffkCLqgXggcKBgF_eIwRr0UFke6mJ440-A&oe=698932B7",
+      "isPrimary": true
+    },
+    {
+      "id": 2,
+      "name": "Clean Dog - Iława",
+      "address": "Dom Handlowy Feniks, ul. Niepodległości 2",
+      "city": "14-200 Iława",
+      "phone": "723 179 982",
+      "hours": [
+        {
+          "day": "Codziennie",
+          "time": "Indywidualne"
+        },
+        {
+          "day": "",
+          "time": ""
+        },
+        {
+          "day": "",
+          "time": ""
+        }
+      ],
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dom+Handlowy+Feniks+Niepodległości+2+Iława",
+      "image": "https://scontent-ber1-1.xx.fbcdn.net/v/t39.30808-6/595381388_122273045138225236_8616398077221246503_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=H2TnugwofIYQ7kNvwEzOoT8&_nc_oc=AdmUYITTwyGvYr6o46TSpIdR_ghgEVdPqCbuFxe_scrRnUZS25Q1IvZf__rMuPf68Dk&_nc_zt=23&_nc_ht=scontent-ber1-1.xx&_nc_gid=VULogWUviAsFDUyjQ66-7g&oh=00_AfvktePe3lUqVStSZ3XJXjM93SNL9qbQQtebuCkHMgJR0Q&oe=69892A07",
+      "isPrimary": false
+    }
+  ],
+  "uiText": {
+    "services.description": "Oferujemy szeroki zakres usług groomerskich, dostosowanych do indywidualnych potrzeb każdego czworonoga.",
+    "footer.contact.address1": "ul. Narutowicza 28a | Iława",
+    "footer.contact.address2": "13-300 Nowe Miasto Lubawskie",
+    "about.floating.label": "doświadczenia"
+  }
+}

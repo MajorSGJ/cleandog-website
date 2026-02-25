@@ -200,25 +200,46 @@ const Locations = () => {
           ))}
         </div>
 
-        {/* Map embed for main location */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 rounded-3xl overflow-hidden shadow-xl"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.5!2d19.5933!3d53.4219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI1JzE4LjgiTiAxOcKwMzUnMzUuOSJF!5e0!3m2!1spl!2spl!4v1"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Lokalizacja Clean Dog"
-            className="grayscale hover:grayscale-0 transition-all duration-500"
-          />
-        </motion.div>
+        {/* Map embeds */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="rounded-3xl overflow-hidden shadow-xl"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2386.536666751284!2d19.5936893!3d53.423985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471d448c7e303ca9%3A0x7396788225586617!2sul.%20Narutowicza%2028A%2C%2013-300%20Nowe%20Miasto%20Lubawskie!5e0!3m2!1spl!2spl!4v1699999999999!5m2!1spl!2spl"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Clean Dog - Nowe Miasto Lubawskie"
+              className="grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="rounded-3xl overflow-hidden shadow-xl"
+          >
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.1172151628174!2d19.5606679!3d53.5925827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471d331980862029%3A0x5a1955745422718e!2sNiepodleg%C5%82o%C5%9Bci%202%2C%2014-200%20I%C5%82awa!5e0!3m2!1spl!2spl!4v1708900000000!5m2!1spl!2spl"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Clean Dog - Iława"
+              className="grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   )

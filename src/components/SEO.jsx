@@ -15,7 +15,7 @@ const SEO = ({
   const defaultTitle = `${siteInfo.name} - Psi Fryzjer Nowe Miasto Lubawskie i Iława | Salon Groomerski`
   const defaultDescription = `${siteInfo.name} – profesjonalny psi fryzjer i salon groomerski w Nowym Mieście Lubawskim i Iławie. Strzyżenie psów, kąpiel, pielęgnacja sierści, obcinanie pazurków. Umów wizytę: ${siteInfo.phone}`
   const defaultKeywords = 'psi fryzjer, psi fryzjer nowe miasto lubawskie, psi fryzjer iława, groomer, groomer nowe miasto lubawskie, groomer iława, salon groomerski, strzyżenie psów, kąpiel psów, pielęgnacja psów, fryzjer dla psów, Clean Dog, Daria Wiśniewska, salon dla psów warmińsko-mazurskie'
-  const defaultImage = siteInfo.banner || siteInfo.logo
+  const defaultImage = siteInfo.logo || siteInfo.banner
   const defaultUrl = 'https://cleandog.pl'
 
   const seoTitle = title || defaultTitle
